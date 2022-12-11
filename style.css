@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+/* body {
+    height: 2000px;
+} */
+
+section {
+    height: 100vh;
+    background: url('./img/bg_retro.jpg') fixed center;
+    filter: brightness(130%)/*  blur(3px) */;
+}
+
+section * {
+    filter: none;
+}
+
+h1 {
+    color: snow;
+    font-size: 7em;
+    font-family: sans-serif;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    animation: slide 2s;
+}
+
+div.holder {
+    position: relative;
+    width: 720px;
+    height: 350px;
+    border: 1px #d65c73 solid;
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 300px;
+
+    background-color: white;
+    animation: slide 2s;
+}
+
+div.inner {
+    position: relative;
+    animation: fade 2s;
+    animation-delay: 1.2s;
+    opacity: 0;
+} div.inner {
+    padding: 10px;
+}
+
+@keyframes slide {
+    from{
+        opacity: 0;
+        top: 700px;
+    }
+    to {
+        opacity: 1;
+        top: 300px;
+        transform: rotate(720);
+    }
+}
+
+@keyframes void {
+    from {opacity: 0;}
+    to {opacity: 0;}
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    height: 100px;
+}
+
+.pic {
+    margin: 15px;
+    background-image: url('./img/pf_devil9_rain.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: coinSpin 2s;
+    animation-delay: 2.5s;
+
+    float: left;
+}
+
+.pic::before, .pic::after {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    transform-origin: center center;
+}
+
+.pic::before {
+    transform: translateY(10%);
+    filter: blur(20px) brightness(1.6);
+}
+
+.pic::after {
+    filter: blur(0.000001px) brightness(1.1);
+} 
+
+/* .pic:hover {
+    animation: coinSpin 2s;
+} */
+
+@keyframes coinSpin {
+    from {
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+dl {
+    float: left;
+
+    opacity: 0;
+    margin: 35px;
+    margin-right: 0;
+
+    animation: sideSlide 2s;
+    animation-delay: 2.5s;
+}
+
+dt {
+    margin-top: 10px;
+    color: black
+}
+
+dd {
+    color: dimgray;
+    margin-left: 12px;
+}
+
+dl, dd, dt {
+    width: max-content;
+}
+
+dl.second {
+    opacity: 0;
+    animation: progressSlide 2s;
+    animation-delay: 3.5s;
+}
+
+@keyframes sideSlide {
+    from {
+        margin-left: 250px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 35px;
+        opacity: 1;
+    }
+}
+
+@keyframes progressSlide {
+    from {
+        margin-left: 185px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 35px;
+        opacity: 1;
+    }
+}
+
+progress {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px black solid;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background-image: linear-gradient(45deg, #d65c73, #bcc0dc);
+    border-radius: 20px;
+}
+
+div#dummy {
+    color:#9cd1d1,#91b3ce,#bcc0dc,#ddb7cd,#f6e6e0,#e8f0e6,
+    #d2efff, #cfdaf4
+}
+nav {
+    width: 100%;
+    height: 80px;
+    border-end-end-radius: inherit;
+    border-bottom-left-radius: inherit;
+    position: absolute;
+    bottom: 0px;
+
+    background-color: #d65c73;
+}
+nav ul li {
+    color: snow;
+    list-style: none;
+    float: left;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 55px;
+}
+
+nav ul {
+    position: absolute;
+}
+
+.now {
+    border-bottom: snow 1px solid;
+}
+
+
+
+
+
+
+
+/*.top-bar {
+    position: relative;
+    background: linear-gradient(45deg, #69a5dc, #ffffff);
+    width: inherit;
+    top: 0;
+}
+
+.tab {
+    width: 540px;
+    border: #efefef 1px solid;
+}
+
+.top-button-holder button {
+    font-size: 9px;
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.top-button-holder {
+    width: fit-content;
+    position: relative;
+    float: right;
+    right: 0;
+}*/
+
+.deactivated {
+    display: none;
+}
